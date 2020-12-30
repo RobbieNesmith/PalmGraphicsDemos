@@ -1,0 +1,40 @@
+#include "graphicsdemos.h"
+
+DATA "code" ID 1 "code0001.bin"
+
+FORM ID InfSprForm AT (0 0 160 160)
+USABLE
+BEGIN
+	TITLE "Infinite Sprites"
+	BUTTON "Prev" ID ButtonPrev AT (CENTER@40 140 40 AUTO)
+	BUTTON "Reset" ID ButtonReset AT (CENTER 140 40 AUTO)
+	BUTTON "Next" ID ButtonNext AT (CENTER@120 140 40 AUTO)
+END
+
+FORM ID MandelbrotForm AT (0 0 160 160)
+USABLE
+BEGIN
+	TITLE "Mandelbrot Set"
+	BUTTON "Prev" ID ButtonPrev AT (CENTER@40 140 40 AUTO)
+	BUTTON "Next" ID ButtonNext AT (CENTER@120 140 40 AUTO)
+END
+
+SMALLICON "icon_small.bmp"
+
+BITMAPFAMILYEX ID BitmapCat
+BEGIN
+     BITMAP "cat_1bit.bmp" BPP 1 DENSITY 1
+     BITMAP "cat_4gray.bmp" BPP 2 DENSITY 1
+     BITMAP "cat_color.bmp" BPP 8 DENSITY 1 TRANSPARENCY 255 0 0
+END
+
+ICONFAMILYEX
+BEGIN
+     BITMAP "icon_1bit.bmp" BPP 1 DENSITY 1
+     BITMAP "icon_4gray.bmp" BPP 2 DENSITY 1
+     BITMAP "icon_color.bmp" BPP 8 DENSITY 1 TRANSPARENCY 255 0 0
+END
+
+VERSION 1 "1.0.0"
+
+LAUNCHERCATEGORY ID 1000 "Tutorial"
